@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap");
+
+@layer base {
+  body {
+    @apply font-body bg-black;
+  }
+}
+
+@layer components {
+  .sidebarIcon {
+    @apply w-8 h-8 hover:text-[#8A00FF] hover:scale-105 cursor-pointer;
+  }
+
+  .icon {
+    @apply hover:scale-125 duration-200 ease-in-out transition-all;
+  }
+
+  .croppedIcon {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .playerIcon {
+    @apply transition ease-out transform hover:scale-105 hover:text-white;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+}
